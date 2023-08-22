@@ -8,7 +8,7 @@
 
 The video player for Flutter with a heart of gold. 
 
-The [`video_player`](https://pub.dartlang.org/packages/video_player) plugin provides low-level access to video playback. Chewie uses the `video_player` under the hood and wraps it in a friendly Material or Cupertino UI!
+The [`flutter_vlc_player`](https://pub.dartlang.org/packages/flutter_vlc_player) plugin provides low-level access to video playback. Chewie uses the `flutter_vlc_player` under the hood and wraps it in a friendly Material or Cupertino UI!
 
 ## Preview
 
@@ -21,19 +21,19 @@ The [`video_player`](https://pub.dartlang.org/packages/video_player) plugin prov
 
 ## Installation
 
-In your `pubspec.yaml` file within your Flutter Project add `chewie` and `video_player` under dependencies:
+In your `pubspec.yaml` file within your Flutter Project add `chewie` and `flutter_vlc_player` under dependencies:
 
 ```yaml
 dependencies:
   chewie: <latest_version>
-  video_player: <latest_version>
+  flutter_vlc_player: <latest_version>
 ```
 
 ## Using it
 
 ```dart
 import 'package:chewie/chewie.dart';
-final videoPlayerController = VideoPlayerController.network(
+final videoPlayerController = VlcPlayerController.network(
     'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
 
 await videoPlayerController.initialize();
@@ -181,7 +181,7 @@ Please run the app in the [`example/`](https://github.com/brianegan/chewie/tree/
 
 ## Migrating from Chewie < 0.9.0
 
-Instead of passing the `VideoPlayerController` and your options to the `Chewie` widget you now pass them to the `ChewieController` and pass that later to the `Chewie` widget.
+Instead of passing the `VlcPlayerController` and your options to the `Chewie` widget you now pass them to the `ChewieController` and pass that later to the `Chewie` widget.
 
 ```dart
 final playerWidget = Chewie(
@@ -233,7 +233,7 @@ final playerWidget = Chewie(
 
 ## iOS warning 
 
-The video_player plugin used by chewie will only work in iOS simulators if you are on flutter 1.26.0 or above. You may need to switch to the beta channel `flutter channel beta`
+The flutter_vlc_player plugin used by chewie will only work in iOS simulators if you are on flutter 1.26.0 or above. You may need to switch to the beta channel `flutter channel beta`
 Please refer to this [issue](https://github.com/flutter/flutter/issues/14647).
 
 
