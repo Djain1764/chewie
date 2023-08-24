@@ -211,6 +211,9 @@ class _ProgressBarPainter extends CustomPainter {
         value.duration.inMilliseconds;
     final double playedPart =
         playedPartPercent > 1 ? size.width : playedPartPercent * size.width;
+    if (playedPart.isNaN) {
+      return;
+    }
     canvas.drawRRect(
       RRect.fromRectAndRadius(
         Rect.fromPoints(

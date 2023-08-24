@@ -50,6 +50,7 @@ class PlayerWithControls extends StatelessWidget {
                   controller: chewieController.videoPlayerController,
                   aspectRatio:
                       chewieController.videoPlayerController.value.aspectRatio,
+                  placeholder: const Center(child: CircularProgressIndicator()),
                 ),
               ),
             ),
